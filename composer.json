@@ -13,7 +13,10 @@
     },
     "config": {
         "vendor-dir": "Packages/Libraries",
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "platform": {
+            "php": "7.1"
+        }
     },
     "require": {
         "neos/neos": "~3.2.0",
@@ -38,8 +41,9 @@
         "phpunit/phpunit": "~6.0.0",
         "symfony/css-selector": "~2.0",
         "neos/behat": "dev-master",
-        "editorconfig-checker/editorconfig-checker": "^6.0",
-        "sitegeist/neosguidelines": "^1.1"
+        "editorconfig-checker/editorconfig-checker": "^7.0",
+        "sitegeist/neosguidelines": "^1.1",
+        "squizlabs/php_codesniffer": "^3.0"
     },
     "replace": {
         "typo3/neos-base-distribution": "3.1.2"
@@ -52,7 +56,17 @@
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "lint:editorconfig": "./bin/editorconfig-checker -d -e 'Public|vendor|Sites\\.xml' ./Packages/Sites/DG.BodyInTheLight/*"
+        "test": "echo no tests",
+        "lint": [
+            "composer lint:psr2",
+            "composer lint:packages",
+            "composer lint:distribution",
+            "composer lint:editorconfig"
+        ],
+        "lint:psr2": "bin/phpcs --standard=PSR2 Packages/Sites/DG.BodyInTheLight/Classes",
+        "lint:packages": "./flow guidelines:validatepackages",
+        "lint:distribution": "./flow guidelines:validatedistribution",
+        "lint:editorconfig": "./bin/editorconfig-checker -e 'Public|Sites\\.xml' ./Packages/Sites/DG.BodyInTheLight/*"
     },
     "repositories": {
         "excalibur": {
