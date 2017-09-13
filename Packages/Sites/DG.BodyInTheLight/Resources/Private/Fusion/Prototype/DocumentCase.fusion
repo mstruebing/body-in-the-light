@@ -1,0 +1,6 @@
+prototype(DG.BodyInTheLight:Prototype.DocumentCase) < prototype(Neos.Fusion:Case) {
+    default {
+        condition = TRUE
+        renderer = DG.BodyInTheLight:Document.Page
+    }
+}

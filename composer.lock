@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fab6a21913ec1622f296de7c44b9fd56",
+    "content-hash": "0d45504c2b3031a11527a4727816980d",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3941,16 +3941,16 @@
         },
         {
             "name": "sitegeist/monocle",
-            "version": "v2.0.7",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sitegeist/Sitegeist.Monocle.git",
-                "reference": "217fba0b21906eb6ca7db37658a41be31439e9d7"
+                "reference": "8ea4b0a1e89fe421b1b999e35fbe1a747551b16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Monocle/zipball/217fba0b21906eb6ca7db37658a41be31439e9d7",
-                "reference": "217fba0b21906eb6ca7db37658a41be31439e9d7",
+                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Monocle/zipball/8ea4b0a1e89fe421b1b999e35fbe1a747551b16a",
+                "reference": "8ea4b0a1e89fe421b1b999e35fbe1a747551b16a",
                 "shasum": ""
             },
             "require": {
@@ -4050,7 +4050,7 @@
                 }
             ],
             "description": "An living-styleguide for Neos that is based on the actual fusion-code",
-            "time": "2017-07-23T09:54:03+00:00"
+            "time": "2017-09-03T12:32:50+00:00"
         },
         {
             "name": "symfony/console",

@@ -1,0 +1,12 @@
+prototype(DG.BodyInTheLight:Component.Template.Default) < prototype(PackageFactory.AtomicFusion:Component) {
+    @styleguide {
+        title = 'Default Page Template'
+        description = 'This is the default page layout.'
+
+        props {
+        }
+    }
+
+    renderer = Neos.Fusion:Array {
+    }
+}
