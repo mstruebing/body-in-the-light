@@ -3,5 +3,18 @@
   "version": "1.0.0",
   "repository": "git@github.com:mstruebing/body-in-the-light.git",
   "author": "Max Strübing <mxstrbng@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "sitegeist-excalibur",
+    "build:css": "sitegeist-excalibur",
+    "build:js": "sitegeist-excalibur",
+    "watch:build": "sitegeist-excalibur",
+    "watch:build:css": "sitegeist-excalibur",
+    "watch:build:js": "sitegeist-excalibur",
+    "test:unit": "sitegeist-excalibur"
+  },
+  "dependencies": {
+    "sitegeist-excalibur": "https://github.com/sitegeist/Sitegeist.Excalibur.git"
+  }
 }
