@@ -4,9 +4,69 @@ prototype(DG.BodyInTheLight:Component.Template.Default) < prototype(PackageFacto
         description = 'This is the default page layout.'
 
         props {
+            linkToHomepage = '#'
+            navigationItems = Neos.Fusion:RawArray {
+                0 = Neos.Fusion:RawArray {
+                    label = 'Seite 1'
+                    link = '#'
+                }
+                1 = Neos.Fusion:RawArray {
+                    label = 'Seite 2'
+                    link = '#'
+                }
+                2 = Neos.Fusion:RawArray {
+                    label = 'Seite 3'
+                    link = '#'
+                }
+                3 = Neos.Fusion:RawArray {
+                    label = 'Seite 4'
+                    link = '#'
+                }
+                4 = Neos.Fusion:RawArray {
+                    isActive = true
+                    label = 'Seite 5'
+                    link = '#'
+                }
+            }
+
+            main = Neos.Fusion:Array {
+                00 = Neos.Fusion:Tag {
+                    tagName = 'h1'
+                    content = 'Hello World!'
+                }
+            }
+
+            copyright = '&copy; 2017 Body in the Light'
         }
     }
 
+    linkToHomepage = ''
+    navigationItems = ''
+    main = ''
+    copyright = ''
+
     renderer = Neos.Fusion:Array {
+        header = DG.BodyInTheLight:Component.Organism.Header {
+            linkToHomepage = ${props.linkToHomepage}
+            pages = ${props.navigationItems}
+        }
+
+        main = Neos.Fusion:Tag {
+            tagName = 'main'
+
+            content = Neos.Fusion:Array {
+                1 = ${props.main}
+            }
+
+
+        }
+
+        footer = DG.BodyInTheLight:Component.Organism.Footer {
+            copyright = ${props.copyright}
+        }
+
+        @process.javaScript = Sitegeist.Excalibur:JavaScriptComponentWrapping {
+            props = ${[]}
+        }
     }
 }

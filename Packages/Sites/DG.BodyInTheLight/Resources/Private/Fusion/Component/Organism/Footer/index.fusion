@@ -1,0 +1,23 @@
+prototype(DG.BodyInTheLight:Component.Organism.Footer) < prototype(PackageFactory.AtomicFusion:Component) {
+    @styleguide {
+        props {
+            copyright = '&copy; 2017 Body in the Light'
+        }
+    }
+
+    copyright = ''
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'footer'
+        attributes.class = PackageFactory.AtomicFusion:ClassNames {
+            footer = true
+        }
+        content = Neos.Fusion:Tag {
+            tagName = 'div'
+            attributes.class = PackageFactory.AtomicFusion:ClassNames {
+                footer__copyright = true
+            }
+            content = ${props.copyright}
+        }
+    }
+}

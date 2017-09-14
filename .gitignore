@@ -22,3 +22,7 @@
 /Tests/Selenium/settings.xml
 Build/Resources/Java/selenium-server-standalone*
 /"
+yarn-error.log
+node_modules
+Packages/Sites/DG.BodyInTheLight/Resources/Public/JavaScript
+Packages/Sites/DG.BodyInTheLight/Resources/Public/Styles

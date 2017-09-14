@@ -1,5 +1,13 @@
 prototype(DG.BodyInTheLight:Document.Page) < prototype(DG.BodyInTheLight:Document.Base) {
     body.content = DG.BodyInTheLight:Component.Template.Default {
+        linkToHomepage = Neos.Neos:NodeUri {
+            node = ${site}
+        }
+
+        copyright = PackageFactory.AtomicFusion:Editable {
+            property = 'copyright'
+        }
+
         main = Neos.Neos:ContentCollection {
             nodePath = 'main'
         }

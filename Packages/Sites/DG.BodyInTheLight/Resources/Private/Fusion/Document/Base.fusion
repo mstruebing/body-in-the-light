@@ -30,6 +30,19 @@ prototype(DG.BodyInTheLight:Document.Base) < prototype(Neos.Neos:Page) {
     body = Neos.Fusion:Array {
         node >
         site >
+
+        content {
+            navigationItems = Neos.Fusion:RawCollection {
+                collection = ${q(site).children('[instanceof DG.BodyInTheLight:Document][_hiddenInIndex!=true]').get()}
+
+                itemRenderer = Neos.Fusion:RawArray {
+                    label = ${q(item).property('title')}
+                    link = Neos.Neos:NodeUri {
+                        node = ${item}
+                    }
+                }
+            }
+        }
     }
 
     javascripts = Neos.Fusion:Array {

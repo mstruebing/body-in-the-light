@@ -1,0 +1,17 @@
+prototype(DG.BodyInTheLight:Component.Organism.Header) < prototype(PackageFactory.AtomicFusion:Component) {
+    @styleguide {
+        props {
+            linkToHomepage = '#'
+        }
+    }
+
+    linkToHomepage = ''
+    pages = Neos.Fusion:RawArray
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'header'
+        attributes.class = PackageFactory.AtomicFusion:ClassNames {
+            header = true
+        }
+    }
+}
