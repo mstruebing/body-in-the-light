@@ -56,10 +56,10 @@
         "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "test": "echo no tests",
         "lint": [
-            "composer lint:psr2",
-            "composer lint:packages",
-            "composer lint:distribution",
-            "composer lint:editorconfig"
+            "@lint:psr2",
+            "@lint:packages",
+            "@lint:distribution",
+            "@lint:editorconfig"
         ],
         "lint:psr2": "bin/phpcs --standard=PSR2 Packages/Sites/DG.BodyInTheLight/Classes",
         "lint:packages": "./flow guidelines:validatepackages",
