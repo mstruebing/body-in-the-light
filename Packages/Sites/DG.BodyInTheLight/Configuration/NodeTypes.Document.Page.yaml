@@ -1,0 +1,17 @@
+'DG.BodyInTheLight:Document.Page':
+  ui:
+    label: 'Seite'
+    icon: 'icon-file-text'
+
+  superTypes:
+    'DG.BodyInTheLight:Document': true
+    'DG.BodyInTheLight:Mixin.Collection.Main': true
+
+  constraints:
+    nodeTypes:
+      '*': false
+      'Neos.Neos:Document': false
+      'DG.BodyInTheLight:Document.HomePage': false
+      'Neos.Neos:Shortcut': true
+      'DG.BodyInTheLight:Document': true
+

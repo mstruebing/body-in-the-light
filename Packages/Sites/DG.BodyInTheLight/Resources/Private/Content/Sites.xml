@@ -3,11 +3,11 @@
  <site name="body-in-the-light.de" state="1" siteResourcesPackageKey="DG.BodyInTheLight" siteNodeName="bodyinthelight">
   <nodes formatVersion="2.0">
    <node nodeName="bodyinthelight">
-    <variant workspace="live" nodeType="Neos.NodeTypes:Page" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+    <variant workspace="live" nodeType="DG.BodyInTheLight:Document.Page" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
      <dimensions>
-     
+
       <language>en_US</language>
-     
+
      </dimensions>
      <accessRoles __type="array"/>
      <properties>
@@ -18,9 +18,9 @@
     <node nodeName="main">
      <variant workspace="live" nodeType="Neos.Neos:ContentCollection" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
       <dimensions>
-      
+
        <language>en_US</language>
-      
+
       </dimensions>
       <accessRoles __type="array"/>
      </variant>

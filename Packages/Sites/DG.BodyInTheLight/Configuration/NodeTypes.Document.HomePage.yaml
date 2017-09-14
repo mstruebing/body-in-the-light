@@ -1,0 +1,7 @@
+'DG.BodyInTheLight:Document.HomePage':
+  superTypes:
+    'DG.BodyInTheLight:Document.Page': true
+
+  ui:
+    label: 'Startseite'
+    icon: 'icon-globe'

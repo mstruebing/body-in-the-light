@@ -1,0 +1,9 @@
+'DG.BodyInTheLight:Mixin.Collection.Main':
+  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'DG.BodyInTheLight:Mixin.Constraint.MainContent': true
